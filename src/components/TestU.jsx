@@ -1,32 +1,40 @@
-export default function TestU(){
-    const ar = [
-        {
-            name:'le',
-            age:12
-        },
-        {
-            name:'wang',
-            age:13
-        },
-        {
-            name:'liu',
-            age:14
-        },
-    ]
-    const showList = (ar)=>(
-        ar.map((item,index)=>(
-        <li key={index}>{item.name} + {item.age}</li>
+import { useState } from 'react';
+
+
+function TestU(){
+    const [userData, setUserData] = useState(null)
+    // const [userList, setUserList] = useState(null)
+    const fetchData = ()=>{
+        fetch('./data.json')
+        .then(response=> response.json())
+        .then(data=>setUserData(data))
+        .catch(error=>console.error('Error fetching data:', error));
+    }
+    fetchData();
+    if(userData){
+        let {users} = userData;
+
+        const userList =users.map((item)=>(
+            <li key={item.id}>{item.name}</li>
+        ))
+        return(
+            <>
+            <p>useCallback</p> 
+            <ul>
+                {userList}
+            </ul>
+            </>
         )
+    } else {
+        return (
+            <p>nothing in list</p> 
+
         )
-        );
-    console.log(showList(ar))
-    return(
-        <>
-        <p>asdf</p>
-        <ul>
-            {showList(ar)}
-        </ul>
-        </>
-    )
+    }
+
+
+
 
 }
+
+export default TestU;

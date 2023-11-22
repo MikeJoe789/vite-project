@@ -1,0 +1,57 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "username": "john_doe",
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "age": 30,
+        "address": {
+          "street": "123 Main St",
+          "city": "Anytown",
+          "state": "CA",
+          "zipcode": "12345"
+        }
+      },
+      {
+        "id": 2,
+        "username": "jane_smith",
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "age": 25,
+        "address": {
+          "street": "456 Oak St",
+          "city": "Another City",
+          "state": "NY",
+          "zipcode": "67890"
+        }
+      },
+      {
+        "id": 3,
+        "username": "sam_jackson",
+        "name": "Sam Jackson",
+        "email": "sam.jackson@example.com",
+        "age": 28,
+        "address": {
+          "street": "789 Pine St",
+          "city": "Someville",
+          "state": "TX",
+          "zipcode": "54321"
+        }
+      },
+      {
+        "id": 4,
+        "username": "Lam_jackson",
+        "name": "SLam Jackson",
+        "email": "Lam.jackson@example.com",
+        "age": 18,
+        "address": {
+          "street": "789 Pine St",
+          "city": "Someville",
+          "state": "TX",
+          "zipcode": "54321"
+        }
+      }
+    ]
+  }
+  
